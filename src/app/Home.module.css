@@ -1,0 +1,35 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.startButton,
+.stopButton {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+}
+
+.startButton:disabled,
+.stopButton:disabled {
+  opacity: 0.5;
+}
+
+.status,
+.error {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #333;
+}
