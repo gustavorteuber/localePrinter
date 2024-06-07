@@ -56,22 +56,22 @@ const Home: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>RESPEITA O PAI PORRAAA</h1>
+      <h1 className={styles.title}>Simulação de Viagem</h1>
       <div className={styles.buttons}>
         <button onClick={startRun} disabled={isRunning || runCompleted} className={styles.startButton}>
-          Start Run
+          Iniciar Viagem
         </button>
         <button onClick={stopRun} disabled={!isRunning} className={styles.stopButton}>
-          Stop Run
+          Parar Viagem
         </button>
         <button onClick={simulateRoute} disabled={isRunning || runCompleted} className={styles.startButton}>
-          Simulate Route
+          Simular Rota
         </button>
       </div>
-      {isRunning && <p className={styles.status}>Run in progress...</p>}
-      {runCompleted && <p className={styles.status}>Run completed!</p>}
+      {isRunning && <p className={styles.status}>Viagem em andamento...</p>}
+      {runCompleted && <p className={styles.status}>Viagem concluída!</p>}
       {!isRunning && positions.length > 0 && !permissionDenied && <Map positions={positions} />}
-      {permissionDenied && <p className={styles.error}>Please enable location services to start a run.</p>}
+      {permissionDenied && <p className={styles.error}>Por favor, habilite os serviços de localização para iniciar uma viagem.</p>}
     </div>
   );
 }
